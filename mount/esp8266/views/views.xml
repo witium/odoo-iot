@@ -1,0 +1,40 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+    
+    <record model="ir.ui.view" id="esp8266.list">
+      <field name="name">esp8266 list</field>
+      <field name="model">esp8266</field>
+      <field name="arch" type="xml">
+        <form>
+          <field name="value"/>
+        </form>
+      </field>
+    </record>
+
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="esp8266.action_window">
+      <field name="name">esp8266 window</field>
+      <field name="res_model">esp8266</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Top menu item -->
+
+    <menuitem name="esp8266" id="esp8266.menu_root"/>
+
+    <!-- menu categories -->
+    <!--
+    <menuitem name="Menu 1" id="esp8266.menu_1" parent="esp8266.menu_root"/>
+    <menuitem name="Menu 2" id="esp8266.menu_2" parent="esp8266.menu_root"/>
+    -->
+    <!-- actions -->
+    <!--
+    <menuitem name="List" id="esp8266.menu_1_list" parent="esp8266.menu_1"
+              action="esp8266.action_window"/>
+    <menuitem name="Server to list" id="esp8266" parent="esp8266.menu_2"
+              action="esp8266.action_server"/>
+    -->
+  </data>
+</odoo>
